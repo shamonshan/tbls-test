@@ -1,0 +1,8 @@
+# .tbls.yml
+
+# DSN (Database Source Name) to connect database
+dsn: postgres://dbuser:dbpass@localhost:5432/dbname
+
+# Path to generate document
+# Default is `dbdoc`
+docPath: doc/schema
