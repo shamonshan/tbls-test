@@ -1,7 +1,7 @@
 # .tbls.yml
 
 # DSN (Database Source Name) to connect database
-dsn: postgres://dbuser:dbpass@localhost:5432/dbname
+dsn: postgres://postgres:postgres@tbls-test_db_1:5432/postgres?sslmode=disable
 
 # Path to generate document
 # Default is `dbdoc`
