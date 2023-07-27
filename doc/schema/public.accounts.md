@@ -2,6 +2,8 @@
 
 ## Description
 
+Keep the basic informations
+
 ## Columns
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |

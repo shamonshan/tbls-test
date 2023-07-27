@@ -4,7 +4,7 @@
 
 | Name | Columns | Comment | Type |
 | ---- | ------- | ------- | ---- |
-| [public.accounts](public.accounts.md) | 6 |  | BASE TABLE |
+| [public.accounts](public.accounts.md) | 6 | Keep the basic informations | BASE TABLE |
 | [public.roles](public.roles.md) | 2 |  | BASE TABLE |
 | [public.account_roles](public.account_roles.md) | 3 |  | BASE TABLE |
 
