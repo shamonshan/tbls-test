@@ -1,0 +1,37 @@
+@startuml
+!define table(name, desc) entity name as "desc" << (T,#5DBCD2) >>
+!define view(name, desc) entity name as "desc" << (V,#C6EDDB) >>
+!define column(name, type, desc) name <font color="#666666">[type]</font><font color="#333333">desc</font>
+hide methods
+hide stereotypes
+
+skinparam class {
+  BackgroundColor White
+  BorderColor #6E6E6E
+  ArrowColor #6E6E6E
+}
+
+' tables
+table("public.accounts", "public.accounts") {
+  column("user_id", "integer", "")
+  column("username", "varchar(50)", "")
+  column("password", "varchar(50)", "")
+  column("email", "varchar(255)", "")
+  column("created_on", "timestamp without time zone", "")
+  column("last_login", "timestamp without time zone", "")
+}
+table("public.roles", "public.roles") {
+  column("role_id", "integer", "")
+  column("role_name", "varchar(255)", "")
+}
+table("public.account_roles", "public.account_roles") {
+  column("user_id", "integer", "")
+  column("role_id", "integer", "")
+  column("grant_date", "timestamp without time zone", "")
+}
+
+' relations
+"public.account_roles" }o--|| "public.accounts" : "FOREIGN KEY (user_id) REFERENCES accounts(user_id)"
+"public.account_roles" }o--|| "public.roles" : "FOREIGN KEY (role_id) REFERENCES roles(role_id)"
+
+@enduml
